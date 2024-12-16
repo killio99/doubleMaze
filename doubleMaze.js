@@ -127,11 +127,11 @@ class State {
       //console.log("Player1 completed: " + this.player1.completed);
       //console.log("Player2 completed: " + this.player2.completed);
 
-      if (this.level.touches(this.player1.pos, this.player1.size, "goal") 
-      &&!this.player1.completed) {
-        this.player1.completed = true;
+      if (this.level.touches(this.player1.pos, this.player1.size, "goal")) {
+        newState.status = "won";
       }
 
+      /*
       if (this.level.touches(this.player2.pos, this.player2.size, "goal")
       && !this.player2.completed) {
         this.player2.completed = true;
@@ -141,6 +141,7 @@ class State {
       if (this.players[0].completed && this.players[1].completed){
         newState.status = "won";
       }
+      */
 
       return newState;
   }
@@ -167,7 +168,7 @@ class Vec {
 class Player1 {
     //only slighlty different color
     //must be independant so that their collision physics are seperate
-    constructor(pos, speed, completed = false) {
+    constructor(pos, speed, completed) {
         this.pos = pos;
         this.speed = speed;
         this.completed = completed;
@@ -175,8 +176,10 @@ class Player1 {
     }
     
     static create(pos) {
-      return new Player1(pos, new Vec(0, 0));
+      return new Player1(pos, new Vec(0, 0), false);
     }
+
+    
     
     get type() {
         return "Player1";
@@ -217,7 +220,7 @@ Player1.prototype.size = new Vec(.8, .8);
 
 
 class Player2 {
-  constructor(pos, speed, completed = false) {
+  constructor(pos, speed, completed) {
     this.pos = pos;
     this.speed = speed;
     this.completed = completed;
@@ -229,9 +232,10 @@ class Player2 {
   // from the y coordinate of the player's position, because the
   // player is drawn more than one unit tall.)
   static create(pos) {
-    return new Player2(pos, new Vec(0, 0));
+    return new Player2(pos, new Vec(0, 0), false);
   }
 
+  
   get type() {
     return "Player2";
   }
