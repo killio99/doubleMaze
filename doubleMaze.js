@@ -22,7 +22,7 @@ const exampleLevel = `
 //it might be easier to just have 1 level with two charecters
 //both getting to the same goal
 
-const scale = 20;
+const scale = 11;
 const playerXSpeed = 7;
 const playerYSpeed = 7;
 
@@ -177,10 +177,6 @@ class Player1 {
     static create(pos) {
       return new Player1(pos, new Vec(0, 0));
     }
-
-    get completed() {
-      return this.completed;
-    }
     
     get type() {
         return "Player1";
@@ -234,10 +230,6 @@ class Player2 {
   // player is drawn more than one unit tall.)
   static create(pos) {
     return new Player2(pos, new Vec(0, 0));
-  }
-
-  get completed() {
-    return this.completed;
   }
 
   get type() {
