@@ -10,7 +10,7 @@ const exampleLevel = `
 ......................`;
 
 
-
+//hello
 
 //G = goal
 //@ = player
