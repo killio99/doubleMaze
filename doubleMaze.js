@@ -38,7 +38,7 @@ class Level {
         this.width = rows[0].length;
         this.players = [];
 
-        this.rows = [];
+        this.rows = [];     
         for (let y = 0; y < this.height; y++) {
             this.rows.push([]);
             for (let x = 0; x < this.width; x++) {
