@@ -216,7 +216,7 @@ class Player1 {
       }
 }
     
-Player1.prototype.size = new Vec(.8, .8);
+Player1.prototype.size = new Vec(.7, .7);
 
 
 class Player2 {
@@ -271,7 +271,7 @@ class Player2 {
     }
 }
 
-Player2.prototype.size = new Vec(.8, .8);
+Player2.prototype.size = new Vec(.7, .7);
 
 
 /*** elt ***********************************************************/
