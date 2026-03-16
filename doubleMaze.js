@@ -9,15 +9,9 @@ const exampleLevel = `
 ......##############..
 ......................`;
 
-
-//hello
-
 //G = goal
 //@ = player
 //# = wall
-
-//MAKE GOAL NOT AN ACTOR
-//try getting rid of the whole actor component of the game
 
 //it might be easier to just have 1 level with two charecters
 //both getting to the same goal
